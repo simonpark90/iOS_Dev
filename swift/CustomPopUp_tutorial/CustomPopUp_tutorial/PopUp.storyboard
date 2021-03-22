@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Pop Up View Controller-->
+        <scene sceneID="F7Z-US-zrf">
+            <objects>
+                <viewController storyboardIdentifier="AlertPopUpVC" id="5bq-ED-gzn" customClass="CustomPopUpViewController" customModule="CustomPopUp_tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PQ2-GX-CUZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8H1-Bt-f5S" userLabel="bgBnt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onBgBtnClicked:" destination="5bq-ED-gzn" eventType="touchUpInside" id="u55-6t-dWC"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fey-nl-jpI" userLabel="contentView">
+                                <rect key="frame" x="82" y="298" width="250" height="300"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_img" translatesAutoresizingMaskIntoConstraints="NO" id="wBv-eh-pHQ">
+                                        <rect key="frame" x="65" y="20" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="9sU-xt-8If"/>
+                                            <constraint firstAttribute="width" constant="120" id="qxr-lE-sLK"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요! simon입니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNs-Bw-CEF">
+                                        <rect key="frame" x="38.5" y="148" width="173" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="simon의 깃허브입니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtp-io-qzQ">
+                                        <rect key="frame" x="46" y="176" width="158" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9N-lQ-LDI">
+                                        <rect key="frame" x="60" y="260" width="130" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="seT-aL-mJ9"/>
+                                        </constraints>
+                                        <state key="normal" title="레파지토리 보러가기">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onRepositoryBtnClicked:" destination="5bq-ED-gzn" eventType="touchUpInside" id="KGs-9k-5Ra"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="f9N-lQ-LDI" firstAttribute="centerX" secondItem="fey-nl-jpI" secondAttribute="centerX" id="0RQ-Jv-kS2"/>
+                                    <constraint firstItem="LNs-Bw-CEF" firstAttribute="centerX" secondItem="fey-nl-jpI" secondAttribute="centerX" id="0YX-MS-Qyb"/>
+                                    <constraint firstItem="wBv-eh-pHQ" firstAttribute="centerX" secondItem="fey-nl-jpI" secondAttribute="centerX" id="C2V-On-G7w"/>
+                                    <constraint firstItem="wBv-eh-pHQ" firstAttribute="top" secondItem="fey-nl-jpI" secondAttribute="top" constant="20" id="KJe-Ax-BCz"/>
+                                    <constraint firstItem="vtp-io-qzQ" firstAttribute="top" secondItem="LNs-Bw-CEF" secondAttribute="bottom" constant="8" id="MZ0-V0-sy9"/>
+                                    <constraint firstAttribute="width" constant="250" id="adB-TU-8gH"/>
+                                    <constraint firstItem="LNs-Bw-CEF" firstAttribute="top" secondItem="wBv-eh-pHQ" secondAttribute="bottom" constant="8" id="bN3-af-hyo"/>
+                                    <constraint firstItem="vtp-io-qzQ" firstAttribute="centerX" secondItem="fey-nl-jpI" secondAttribute="centerX" id="fQU-GJ-WQv"/>
+                                    <constraint firstAttribute="bottom" secondItem="f9N-lQ-LDI" secondAttribute="bottom" constant="10" id="v4y-WM-tjG"/>
+                                    <constraint firstAttribute="height" constant="300" id="wWb-D9-hA1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GTF-BZ-Doa"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.65202487244897955" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="8H1-Bt-f5S" firstAttribute="trailing" secondItem="GTF-BZ-Doa" secondAttribute="trailing" id="43a-ca-vUK"/>
+                            <constraint firstItem="8H1-Bt-f5S" firstAttribute="leading" secondItem="GTF-BZ-Doa" secondAttribute="leading" id="9A9-d4-XFi"/>
+                            <constraint firstItem="fey-nl-jpI" firstAttribute="centerX" secondItem="PQ2-GX-CUZ" secondAttribute="centerX" id="O6P-1N-AKE"/>
+                            <constraint firstItem="fey-nl-jpI" firstAttribute="centerY" secondItem="PQ2-GX-CUZ" secondAttribute="centerY" id="nCc-OW-j3U"/>
+                            <constraint firstItem="8H1-Bt-f5S" firstAttribute="top" secondItem="GTF-BZ-Doa" secondAttribute="top" id="ntM-ht-6a8"/>
+                            <constraint firstItem="8H1-Bt-f5S" firstAttribute="bottom" secondItem="GTF-BZ-Doa" secondAttribute="bottom" id="pYc-CR-VU6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgBtn" destination="8H1-Bt-f5S" id="AdT-H1-9TD"/>
+                        <outlet property="contentView" destination="fey-nl-jpI" id="eIk-1J-pUv"/>
+                        <outlet property="repositoryBtn" destination="f9N-lQ-LDI" id="Vah-a6-5b4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RpW-Yg-2V2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224.63768115942031" y="144.64285714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="my_img" width="210.5" height="210.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
